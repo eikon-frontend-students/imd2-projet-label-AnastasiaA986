@@ -1,14 +1,52 @@
+@font-face {
+  font-family: "Maligne";
+  src: url("../fonts/Maligne/Trial_WOFF2/MaligneUnlicensedTrial-Medium.woff2")
+      format("woff2"),
+    url("/src/fonts/Maligne/Trial_WOFF/MaligneUnlicensedTrial-Medium.woff")
+      format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
 * {
-  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
-
-a {
-  color: inherit;
+body {
+  font-family: "Maligne", sans-serif;
 }
-
-img,
-video {
+header {
+  display: flex;
+  flex-direction: row;
+  padding: 20px 80px;
+  background-color: #141414;
+  justify-content: space-between;
+  align-items: center;
+}
+nav {
+  display: flex;
+  flex-direction: row;
+  color: white;
+  text-transform: uppercase;
+  gap: 20px;
+}
+.social-icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row;
+  gap: 24px;
+}
+.hero-label {
+  position: relative;
+  display: inline-block;
+}
+.img-label {
   display: block;
+  width: 100%;
+}
+.overlay-text {
+  position: absolute;
+  bottom: 20px;
+  left: 20px;
 }
