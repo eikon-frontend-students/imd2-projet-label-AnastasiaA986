@@ -27,7 +27,6 @@ body {
   justify-content: center;
   flex-direction: column;
   width: 100%;
-  max-width: 1440px;
   background-color: #141414;
 }
 
@@ -66,9 +65,12 @@ nav a {
   background: url(/src/img/image-main.png);
   background-size: cover;
   background-position: center;
-  min-height: 100vh;
   width: 100%;
+  min-height: 85vh;
   padding: 80px 130px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .quote {
@@ -78,6 +80,8 @@ nav a {
   line-height: 130%;
   font-weight: 300;
   font-size: 24px;
+  display: flex;
+  justify-content: space-between;
   text-align: center;
 }
 
@@ -86,6 +90,7 @@ nav a {
 }
 
 .quote-2 {
+  margin-top: 104px;
   max-width: 273px;
 }
 
@@ -134,3 +139,211 @@ h1 {
   border-radius: var(--Radius-30, 30px);
   border: 1px solid #fff;
 }
+
+.about-numbers {
+  display: flex;
+  padding: 100px 140px;
+  justify-content: space-between;
+  align-items: center;
+  align-self: stretch;
+  flex-wrap: wrap;
+}
+
+.releases,
+.awards,
+.vinyl,
+.countries {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+.about-numbers-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h2 {
+  font-size: 82px;
+  font-weight: 700;
+  color: #fff;
+}
+
+.main-text {
+  font-family: Saira, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  line-height: 130%;
+  color: #fff;
+}
+
+.numbers-circles img {
+  max-width: 116px;
+}
+
+.featured-artists {
+  padding-bottom: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+h3 {
+  font-family: Saira;
+  font-size: 48px;
+  font-weight: 400;
+  letter-spacing: 33.6px;
+  text-transform: uppercase;
+  color: #ff7000;
+}
+
+.main-title {
+  color: #ff7000;
+  text-shadow: 10px 0px 0 #ec5d08, 20px 0px 0 #d04011, 30px 0px 0 #b7261a,
+    40px 0px 0 #892219, 50px 0px 0 rgba(137, 34, 25, 0.5);
+}
+
+.title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-secondary-outline {
+  display: flex;
+  width: fit-content;
+  padding: 12px 24px;
+  gap: 10px;
+  justify-content: center;
+  color: white;
+  font-size: 14px;
+  text-decoration: none;
+  text-transform: uppercase;
+  border-radius: var(--Radius-30, 30px);
+  border: 1px solid #fff;
+}
+
+/* .artists-cards {
+  padding: 0 40px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.artist-card {
+  background: url(/src/img/featured-artists/1.png);
+  background-size: cover;
+  background-position: center;
+  width: 100%;
+  max-width: 340px;
+  font-weight: 600;
+  line-height: 130%;
+  display: flex;
+  align-items: flex-end;
+}
+
+.artist-card-hover {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+}
+
+.artist-card-gradient {
+  display: flex;
+  align-items: flex-end;
+  height: 100%;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0) 30%,
+    rgba(183, 38, 26, 0.6) 70%
+  );
+} */
+
+h4 {
+  font-family: Saira, sans-serif;
+  font-weight: 600;
+  font-size: 36px;
+  text-transform: uppercase;
+  color: white;
+  margin-bottom: 10px;
+}
+
+.additional-text {
+  font-family: Saira, sans-serif;
+  font-size: 16px;
+  font-weight: 300;
+  color: white;
+}
+
+.button-additional {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--white-50, rgba(255, 255, 255, 0.5));
+  text-decoration: none;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.icon-small {
+  max-width: 9px;
+  /* белый 50% */
+}
+
+.latest-releases {
+  margin-bottom: 100px;
+}
+
+.banner-latest-releases {
+  margin-top: 60px;
+  background: url(/src/img/new-yara.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+}
+
+.banner-new-yarra {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-left: 9.7%;
+}
+
+.banner-latest-releases .button-primary-outline {
+  margin-top: 20px;
+}
+
+.carousel-dots {
+  display: flex;
+  gap: 15px;
+  align-items: flex-end;
+  padding-bottom: 40px;
+}
+
+.carousel-dot-inactive {
+  width: 18px;
+  height: 18px;
+  border-radius: 18px;
+  border: 1px solid var(--orange-main, #ff7000);
+}
+
+.carousel-dot-active {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  border: 1px solid #ff7000;
+  box-shadow: 0 0 0 3px #141414, 0 0 0 4px #ff7000, 0 0 0 7px #141414,
+    0 0 0 8px #ff7000;
+  transform: translateY(-3px);
+}
+/* Cmd + K, затем Cmd + C
+Комментирует выделенный блок.
+
+Cmd + K, затем Cmd + U
+Снимает комментарий. */
