@@ -8,28 +8,7 @@
   </head>
   <body>
     <div class="homepage">
-      <header>
-        <img class="logo" src="/src/img/Logo_label.svg" alt="" />
-        <nav>
-          <a href="">About</a>
-          <a href="">News</a>
-          <a href="">Artists</a>
-          <a href="">Events</a>
-          <a href="">Merch</a>
-          <a href="">Contact</a>
-        </nav>
-        <div class="icons-header">
-          <ul class="social-icons">
-            <li><img src="/src/img/icons/spotify.svg" alt="spotify" /></li>
-            <li>
-              <img src="/src/img/icons/soundcloud.svg" alt="soundcloud" />
-            </li>
-            <li><img src="/src/img/icons/facebook.svg" alt="facebook" /></li>
-            <li><img src="/src/img/icons/instagram.svg" alt="instagram" /></li>
-            <li><img src="/src/img/icons/youtube.svg" alt="youtube" /></li>
-          </ul>
-        </div>
-      </header>
+      <include src="./components/header.html"></include>
 
       <div class="hero-label">
         <div class="quote">
@@ -148,6 +127,17 @@
           <h3>Behind the</h3>
           <h1 class="main-title">Scenes</h1>
         </div>
+        <div class="behind-scenes-photos">
+          <div class="camera"></div>
+          <div class="singer"></div>
+          <div class="concert-int"></div>
+          <div class="recording"></div>
+          <div class="studio"></div>
+          <div class="concert-ext"></div>
+        </div>
+      </div>
+
+      <include src="./components/footer.html"></include>
     </div>
     <script src="js/main.js" type="module"></script>
   </body>
