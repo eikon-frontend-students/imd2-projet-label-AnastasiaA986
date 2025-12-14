@@ -37,6 +37,11 @@ header {
   justify-content: space-between;
   flex-wrap: wrap;
 }
+
+.menu-header {
+  display: none;
+}
+
 nav {
   display: flex;
   gap: 20px;
@@ -50,13 +55,18 @@ nav a {
   color: white;
 }
 
+nav a:hover {
+  text-shadow: 2px 0px 0 #d04011, 4px 0px 0 #b7261a, 6px 0px 0 #892219;
+  color: #ff7000;
+}
+
 .social-icons {
   display: flex;
   gap: 20px;
   align-items: center;
 }
 
-.social-icons li {
+.social-icons a {
   display: flex;
   align-items: center;
 }
@@ -140,6 +150,10 @@ h1 {
   border: 1px solid #fff;
 }
 
+.button-primary-outline:hover {
+  box-shadow: 0 0 10px 0 var(--white-100, #fff);
+}
+
 .about-numbers {
   display: flex;
   padding: 100px 140px;
@@ -200,6 +214,7 @@ h3 {
 }
 
 .main-title {
+  transform: translateX(-25px);
   color: #ff7000;
   text-shadow: 10px 0px 0 #ec5d08, 20px 0px 0 #d04011, 30px 0px 0 #b7261a,
     40px 0px 0 #892219, 50px 0px 0 rgba(137, 34, 25, 0.5);
@@ -229,6 +244,10 @@ h3 {
   text-transform: uppercase;
   border-radius: 30px;
   border: 1px solid #fff;
+}
+
+.button-secondary-outline:hover {
+  box-shadow: 0 0 10px 0 var(--white-100, #fff);
 }
 
 .featured-artists .title-section {
@@ -323,19 +342,19 @@ h4 {
 
 .latest-releases-vinyl {
   position: absolute;
-  top: -15%;
+  top: -20%;
   right: -12%;
-  max-width: 700px;
+  width: 55%;
   animation: spin 10s linear infinite;
 }
 
 .yarra-info {
   top: 35.3%;
+  left: 9.7%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  padding-left: 9.7%;
   position: absolute;
 }
 
@@ -495,6 +514,10 @@ footer {
   justify-content: space-between;
 }
 
+.footer-nav a:hover {
+  color: #ff7000;
+}
+
 .footer-nav-main {
   display: flex;
   flex-direction: column;
@@ -511,26 +534,25 @@ footer {
 
 .newsletter-form {
   display: flex;
-  gap: 14px;
   flex-wrap: wrap;
+  gap: 10px;
 }
 
 .footer-newsletter {
   flex-wrap: wrap;
 }
 
-.newsletter-email {
+.newsletter-form input {
+  margin: 0;
   display: flex;
   min-width: 250px;
   padding: 12px 24px;
-  gap: 10px;
   color: rgba(255, 255, 255, 0.5);
-  /* font-weight: 400;
-  font-size: 14px; */
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 30px;
   border: 1px solid #fff;
+  background-color: transparent;
 }
 
 .button-secondary-solid {
@@ -545,6 +567,10 @@ footer {
   border-radius: 30px;
   background-color: #fff;
   color: #141414;
+}
+
+.button-secondary-solid:hover {
+  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.5);
 }
 
 .icons-footer {
@@ -677,8 +703,18 @@ textarea {
   align-self: flex-end;
 }
 
-@media (min-width: 375px) and (max-width: 992px) {
+@media (min-width: 375px) and (max-width: 768px) {
   header {
+    padding: 14px 60px;
+  }
+
+  .menu-header {
+    display: block;
+  }
+
+  nav,
+  .icons-header {
+    display: none;
   }
 
   .hero-label {
@@ -695,7 +731,6 @@ textarea {
     line-height: 130%;
     font-size: 18px;
     display: flex;
-    /* justify-content: space-between; */
     text-align: center;
   }
 
@@ -718,9 +753,9 @@ textarea {
     text-align: start;
   }
 
-  nav,
-  .icons-header {
-    display: none;
+  .button-primary-outline {
+    padding: 12px 24px;
+    font-size: 14px;
   }
 
   h1 {
@@ -728,13 +763,14 @@ textarea {
   }
 
   .main-title {
+    transform: translateX(-17px);
     text-shadow: 7px 0px 0 #ec5d08, 14px 0px 0 #d04011, 21px 0px 0 #b7261a,
       29px 0px 0 #892219, 36px 0px 0 rgba(137, 34, 25, 0.5);
   }
 
   h3 {
-    font-size: 24px;
-    letter-spacing: 21px;
+    font-size: 20px;
+    letter-spacing: 17px;
   }
 
   h4 {
@@ -742,22 +778,12 @@ textarea {
   }
 
   .main-text {
-    font-size: 14px;
+    font-size: 12px;
   }
 
   .about-numbers {
     padding: 60px 36px;
     justify-content: center;
-  }
-
-  .artists-cards {
-    grid-template-columns: 1fr 1fr;
-  }
-
-  .get-in-touch {
-    flex-direction: column;
-    gap: 20px;
-    padding: 40px 36px;
   }
 
   .featured-artists {
@@ -772,22 +798,14 @@ textarea {
     margin-bottom: 60px;
   }
 
-  .latest-releases-vinyl {
-    position: absolute;
-    top: -15%;
-    right: -12%;
-    max-width: 300px;
+  .banner-latest-releases .button-primary-outline {
+    margin-top: 20px;
   }
 
   .yarra-info {
-    padding: 40px 36px;
+    padding: 10px 20px;
+    max-width: 70%;
     text-align: center;
-    left: 0;
-    top: 0;
-  }
-
-  .carousel-dots {
-    display: none;
   }
 
   .carousel-dot-inactive {
@@ -803,19 +821,26 @@ textarea {
   }
 
   .behind-scenes {
-    display: flex;
-    flex-direction: column;
     margin: 0 36px 40px 36px;
   }
+
+  .get-in-touch {
+    flex-direction: column;
+    gap: 20px;
+    padding: 40px 36px;
+  }
+
   footer {
     padding: 20px 36px;
   }
+
   .footer-main {
     padding: 40px 0;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
+
   .footer-nav {
     display: flex;
     flex-direction: column;
@@ -824,8 +849,80 @@ textarea {
     gap: 20px;
     width: 100%;
   }
+
   .footer-contact {
     display: none;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  header {
+    padding: 14px 60px;
+  }
+
+  .icons-header {
+    display: none;
+  }
+
+  .hero-label {
+    padding: 60px 70px;
+  }
+
+  h1 {
+    font-size: 92px;
+  }
+
+  .main-title {
+    transform: translateX(-17px);
+    text-shadow: 7px 0px 0 #ec5d08, 14px 0px 0 #d04011, 21px 0px 0 #b7261a,
+      29px 0px 0 #892219, 36px 0px 0 rgba(137, 34, 25, 0.5);
+  }
+
+  h3 {
+    font-size: 32px;
+    letter-spacing: 21px;
+  }
+
+  .featured-artists {
+    padding: 0 70px 60px 70px;
+  }
+
+  .artists-cards {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .latest-releases {
+    margin-bottom: 60px;
+  }
+
+  .yarra-info {
+    padding: 10px 20px;
+    max-width: 70%;
+    text-align: center;
+    left: 0;
+    top: 0;
+  }
+
+  .behind-scenes {
+    margin: 0 70px 40px 70px;
+  }
+
+  .get-in-touch {
+    gap: 20px;
+    padding: 40px 70px;
+  }
+
+  footer {
+    padding: 40px 70px;
+  }
+
+  .footer-nav {
+    display: flex;
+    flex-direction: column;
+    padding-top: 10px;
+    align-items: flex-start;
+    gap: 20px;
+    width: 100%;
   }
 }
 
