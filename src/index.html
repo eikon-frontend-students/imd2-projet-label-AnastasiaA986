@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="css/main.css" />
   </head>
   <body>
-    <div class="homepage">
+    <div class="page">
       <include src="./components/header.html"></include>
 
       <div class="hero-label">
@@ -71,32 +71,75 @@
         /></a>
         <div class="artists-cards">
           <div class="artist-card">
-            <div class="artist-card-gradient">
-              <div class="artist-card-hover">
-                <h4>Dakooka</h4>
-                <p class="additional-text">
-                  Singer, producer, and composer whose music fuses trip-hop,
-                  indie, electronic, and ethnic styles with emotionally rich
-                  lyrics and a distinctive sound.
-                </p>
-                <a href="" class="button-additional"
-                  >Read more
-                  <img
-                    class="icon-small"
-                    src="/src/img/icons/arrow-right.svg"
-                    alt=""
-                /></a>
-              </div>
+            <img src="/src/img/featured-artists/1.png" alt="" />
+            <div class="artist-card-hover">
+              <h4>Agon</h4>
+              <p class="additional-text">
+                Singer‑producer with a fierce, high‑voltage sound mixing
+                alt‑pop, sharp electronics, and explosive emotional energy.
+              </p>
+              <a href="" class="button-additional"
+                >Read more
+                <img
+                  class="icon-small"
+                  src="/src/img/icons/arrow-right.svg"
+                  alt=""
+              /></a>
             </div>
           </div>
           <div class="artist-card">
             <img src="/src/img/featured-artists/2.png" alt="" />
+            <div class="artist-card-hover">
+              <h4>Luna</h4>
+              <p class="additional-text">
+                Vocalist whose dream‑pop, synth‑driven sound pairs soft,
+                hypnotic vocals with atmospheric electronic textures and
+                intimate, emotionally resonant lyrics
+              </p>
+              <a href="" class="button-additional"
+                >Read more
+                <img
+                  class="icon-small"
+                  src="/src/img/icons/arrow-right.svg"
+                  alt=""
+              /></a>
+            </div>
           </div>
           <div class="artist-card">
             <img src="/src/img/featured-artists/3.png" alt="" />
+            <div class="artist-card-hover">
+              <h4>Boombox</h4>
+              <p class="additional-text">
+                Singer with a powerful, soulful voice that moves between rock,
+                funk, and hip‑hop influences, delivering emotionally charged
+                performances with unmistakable depth and character
+              </p>
+              <a href="/src/artist-details.html" class="button-additional"
+                >Read more
+                <img
+                  class="icon-small"
+                  src="/src/img/icons/arrow-right.svg"
+                  alt=""
+              /></a>
+            </div>
           </div>
           <div class="artist-card">
             <img src="/src/img/featured-artists/4.png" alt="" />
+            <div class="artist-card-hover">
+              <h4>Dakooka</h4>
+              <p class="additional-text">
+                Singer, producer, and composer whose music fuses trip-hop,
+                indie, electronic, and ethnic styles with emotionally rich
+                lyrics and a distinctive sound
+              </p>
+              <a href="" class="button-additional"
+                >Read more
+                <img
+                  class="icon-small"
+                  src="/src/img/icons/arrow-right.svg"
+                  alt=""
+              /></a>
+            </div>
           </div>
         </div>
       </div>
@@ -107,7 +150,17 @@
           <h1 class="main-title">Releases</h1>
         </div>
         <div class="banner-latest-releases">
-          <div class="banner-new-yarra">
+          <img
+            class="latest-releases-bg"
+            src="/src/img/new-releases/yarra-bg.png"
+            alt=""
+          />
+          <img
+            class="latest-releases-vinyl"
+            src="/src/img/new-releases/yarra-vynil.png"
+            alt=""
+          />
+          <div class="yarra-info">
             <h4>New album by YARRA – 'CHUY'</h4>
             <p class="main-text">
               Ancient sounds. A new awakening. Feel what lies beyond words.
@@ -135,8 +188,62 @@
           <div class="studio"></div>
           <div class="concert-ext"></div>
         </div>
+        <a href="" class="button-secondary-outline"
+          >Follow us <img src="/src/img/icons/instagram.svg" alt=""
+        /></a>
       </div>
 
+      <div class="get-in-touch">
+        <div class="get-in-touch-text">
+          <h4>Get in Touch</h4>
+          <p class="main-text">
+            Want to collaborate or ask something? Let’s talk.
+          </p>
+        </div>
+        <form class="get-in-touch-form">
+          <div class="get-in-touch-reason">
+            <label for="reason"></label>
+            <select id="reason" name="reason" required>
+              <option value="">Reason for contact</option>
+              <option value="support">Support</option>
+              <option value="feedback">Feedback</option>
+              <option value="other">Other</option>
+            </select>
+          </div>
+          <div class="get-in-touch-perso">
+            <div class="get-in-touch-name">
+              <label for="name"></label>
+              <input
+                type="text"
+                id="name"
+                name="name"
+                placeholder="Full name"
+                required
+              />
+            </div>
+            <div class="get-in-touch-email">
+              <label for="email"></label>
+              <input type="text" id="email" name="email" placeholder="E-mail" />
+            </div>
+          </div>
+          <div class="get-in-touch-message">
+            <label for="message"></label
+            ><textarea
+              name="message"
+              id="message"
+              placeholder="Message box"
+            ></textarea>
+          </div>
+          <label class="checkbox">
+            <input type="checkbox" />
+            <span class="checkmark"></span>
+            <p class="text-small">
+              I’d like to receive updates about label opportunities
+            </p>
+          </label>
+          <a href="" class="button-secondary-solid">Submit</a>
+        </form>
+      </div>
       <include src="./components/footer.html"></include>
     </div>
     <script src="js/main.js" type="module"></script>
