@@ -7,6 +7,7 @@
   font-weight: normal;
   font-style: normal;
 }
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -147,11 +148,11 @@ h1 {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 30px;
-  border: 1px solid #fff;
+  border: 1px solid white;
 }
 
 .button-primary-outline:hover {
-  box-shadow: 0 0 10px 0 var(--white-100, #fff);
+  box-shadow: 0 0 10px 0 white;
 }
 
 .about-numbers {
@@ -182,7 +183,7 @@ h1 {
 h2 {
   font-size: 82px;
   font-weight: 700;
-  color: #fff;
+  color: white;
 }
 
 .main-text {
@@ -190,7 +191,7 @@ h2 {
   font-size: 20px;
   font-weight: 400;
   line-height: 130%;
-  color: #fff;
+  color: white;
 }
 
 .numbers-circles img {
@@ -220,11 +221,6 @@ h3 {
     40px 0px 0 #892219, 50px 0px 0 rgba(137, 34, 25, 0.5);
 }
 
-/* .main-title:hover {
-  text-shadow: 15px 0px 0 #ec5d08, 25px 0px 0 #d04011, 35px 0px 0 #b7261a,
-    45px 0px 0 #892219, 55px 0px 0 rgba(137, 34, 25, 0.5);
-} */
-
 .title-section {
   display: flex;
   flex-direction: column;
@@ -243,11 +239,11 @@ h3 {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 30px;
-  border: 1px solid #fff;
+  border: 1px solid white;
 }
 
 .button-secondary-outline:hover {
-  box-shadow: 0 0 10px 0 var(--white-100, #fff);
+  box-shadow: 0 0 10px 0 white;
 }
 
 .featured-artists .title-section {
@@ -298,7 +294,6 @@ h4 {
   font-size: 36px;
   text-transform: uppercase;
   color: white;
-  /* margin-bottom: 10px; */
 }
 
 .additional-text {
@@ -320,7 +315,6 @@ h4 {
 
 .icon-small {
   max-width: 9px;
-  /* белый 50% */
 }
 
 .latest-releases {
@@ -329,32 +323,37 @@ h4 {
 
 .banner-latest-releases {
   width: 100%;
-  position: relative;
+  aspect-ratio: 16/9;
+  background-image: url(/src/img/new-releases/yarra-bg.png);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   margin-top: 60px;
   overflow: hidden;
-}
-
-.latest-releases-bg {
-  width: 100%;
-  position: relative;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr auto;
+  grid-template-areas:
+    "yara-info vinyl"
+    "dots dots";
 }
 
 .latest-releases-vinyl {
-  position: absolute;
-  top: -20%;
-  right: -12%;
-  width: 55%;
+  margin-top: -20%;
+  margin-right: -30%;
+  width: 120%;
+  grid-area: vinyl;
   animation: spin 10s linear infinite;
 }
 
 .yarra-info {
-  top: 35.3%;
-  left: 9.7%;
+  margin-left: 10%;
+  grid-area: yara-info;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  position: absolute;
+  text-align: center;
 }
 
 .banner-latest-releases .button-primary-outline {
@@ -362,13 +361,14 @@ h4 {
 }
 
 .carousel-dots {
-  position: absolute;
-  left: 47%;
-  bottom: 1%;
+  justify-content: center;
+  padding-bottom: 40px;
+  grid-area: dots;
   display: flex;
   gap: 15px;
   align-items: flex-end;
   padding-bottom: 40px;
+  align-self: end;
 }
 
 .carousel-dot-inactive {
@@ -457,11 +457,6 @@ h4 {
   background-repeat: no-repeat;
   background-size: cover;
 }
-/* Cmd + K, затем Cmd + C
-Комментирует выделенный блок.
-
-Cmd + K, затем Cmd + U
-Снимает комментарий. */
 
 footer {
   padding: 80px 140px;
@@ -470,7 +465,7 @@ footer {
 .footer-contact {
   display: flex;
   justify-content: space-between;
-  border-bottom: 0.5px solid #fff;
+  border-bottom: 0.5px solid white;
   opacity: 0.5;
   padding-bottom: 20px;
 }
@@ -478,7 +473,7 @@ footer {
 .footer-main-text {
   font-size: 14px;
   font-weight: 400;
-  color: #fff;
+  color: white;
   text-decoration: none;
 }
 
@@ -550,7 +545,7 @@ footer {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 30px;
-  border: 1px solid #fff;
+  border: 1px solid white;
   background-color: transparent;
 }
 
@@ -564,7 +559,7 @@ footer {
   text-decoration: none;
   text-transform: uppercase;
   border-radius: 30px;
-  background-color: #fff;
+  background-color: white;
   color: #141414;
 }
 
@@ -617,7 +612,7 @@ footer {
 
 .get-in-touch-reason select {
   font-size: 14px;
-  color: #fff;
+  color: white;
   appearance: none;
   background-image: url(/src/img/icons/arrow-down.svg);
   background-repeat: no-repeat;
@@ -630,12 +625,12 @@ textarea {
   display: flex;
   width: 100%;
   padding: 16px 32px;
-  border: 1px solid #fff;
+  border: 1px solid white;
   background-color: transparent;
   font-family: Saira, sans-serif;
   font-size: 14px;
   font-weight: 300;
-  color: #fff;
+  color: white;
 }
 
 .get-in-touch-perso {
@@ -651,11 +646,6 @@ textarea {
 .get-in-touch-message textarea {
   min-height: 126px;
 }
-
-/* .checkbox {
-  display: flex;
-  gap: 10px;
-} */
 
 .checkbox {
   display: flex;
@@ -676,7 +666,7 @@ textarea {
 .checkmark {
   width: 20px;
   height: 20px;
-  border: 1px solid #fff;
+  border: 1px solid white;
   background: transparent;
   position: relative;
   flex-shrink: 0;
@@ -694,7 +684,6 @@ textarea {
   transition: 0.2s;
 }
 
-/* Когда чекбокс активен */
 .checkbox input:checked + .checkmark::after {
   opacity: 1;
 }
@@ -705,7 +694,7 @@ textarea {
 
 @media (min-width: 375px) and (max-width: 768px) {
   header {
-    padding: 14px 60px;
+    padding: 14px 36px;
   }
 
   .menu-header {
@@ -755,7 +744,7 @@ textarea {
 
   .button-primary-outline {
     padding: 12px 24px;
-    font-size: 14px;
+    font-size: 12px;
   }
 
   h1 {
@@ -768,13 +757,17 @@ textarea {
       29px 0px 0 #892219, 36px 0px 0 rgba(137, 34, 25, 0.5);
   }
 
+  h2 {
+    font-size: 46px;
+  }
+
   h3 {
     font-size: 20px;
     letter-spacing: 17px;
   }
 
   h4 {
-    font-size: 20px;
+    font-size: 18px;
   }
 
   .main-text {
@@ -803,7 +796,7 @@ textarea {
   }
 
   .yarra-info {
-    padding: 10px 20px;
+    /* padding: 10px 20px; */
     max-width: 70%;
     text-align: center;
   }
@@ -857,7 +850,7 @@ textarea {
 
 @media (min-width: 769px) and (max-width: 1280px) {
   header {
-    padding: 14px 60px;
+    padding: 14px 70px;
   }
 
   .social-icons {
@@ -910,7 +903,8 @@ textarea {
   }
 
   .get-in-touch {
-    gap: 20px;
+    flex-direction: column;
+    gap: 40px;
     padding: 40px 70px;
   }
 
@@ -1003,6 +997,7 @@ textarea {
 }
 
 .concert-list {
+  margin-top: 40px;
   width: 70%;
   display: flex;
   flex-direction: column;
@@ -1012,12 +1007,19 @@ textarea {
 
 .concert {
   display: flex;
-  flex-wrap: wrap;
+  /* flex-wrap: wrap; */
   justify-content: space-between;
   align-items: center;
   gap: 40px;
   padding: 10px 20px 20px 20px;
   border-bottom: 1px solid #ff7000;
+}
+
+.concert-info {
+  width: 60%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 .concert-date {
@@ -1231,15 +1233,38 @@ textarea {
   .boombox {
     padding: 20px 36px;
     flex-direction: column;
-    gap: 40px;
+    justify-content: center;
+    gap: 20px;
   }
 
   .artist {
-    align-self: flex-start;
+    align-self: center;
+  }
+
+  .artist-links {
+    display: none;
+  }
+
+  .artist-new a {
+    margin-top: 14px;
+  }
+
+  .release-subtitle {
+    font-size: 16px;
+    letter-spacing: 4px;
   }
 
   .tour {
     padding: 60px 36px;
+  }
+
+  .concert {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .concert-info {
+    flex-direction: column;
   }
 
   .concert-list {
@@ -1261,7 +1286,7 @@ textarea {
 
   .band-cards {
     grid-template-columns: 1fr;
-    padding: 0;
+    padding: 0 36px;
     gap: 0;
   }
 
@@ -1304,11 +1329,6 @@ textarea {
   .concert-list {
     width: 100%;
   }
-
-  /* .about-main {
-    margin: 70px;
-    gap: 60px;
-  } */
 
   .band-cards {
     grid-template-columns: 1fr 1fr 1fr;
