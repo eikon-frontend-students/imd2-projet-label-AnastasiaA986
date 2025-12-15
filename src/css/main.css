@@ -337,7 +337,6 @@ h4 {
 .latest-releases-bg {
   width: 100%;
   position: relative;
-  height: auto;
 }
 
 .latest-releases-vinyl {
@@ -636,6 +635,7 @@ textarea {
   font-family: Saira, sans-serif;
   font-size: 14px;
   font-weight: 300;
+  color: #fff;
 }
 
 .get-in-touch-perso {
@@ -713,7 +713,7 @@ textarea {
   }
 
   nav,
-  .icons-header {
+  .social-icons {
     display: none;
   }
 
@@ -860,7 +860,7 @@ textarea {
     padding: 14px 60px;
   }
 
-  .icons-header {
+  .social-icons {
     display: none;
   }
 
@@ -896,6 +896,8 @@ textarea {
   }
 
   .yarra-info {
+    top: 0;
+    left: 0;
     padding: 10px 20px;
     max-width: 70%;
     text-align: center;
@@ -942,6 +944,7 @@ textarea {
   background-image: url(/src/img/boombox-main.png);
   background-size: cover;
   background-repeat: no-repeat;
+  background-position: center;
   display: flex;
   justify-content: space-between;
 }
@@ -1009,6 +1012,7 @@ textarea {
 
 .concert {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   gap: 40px;
@@ -1116,11 +1120,11 @@ textarea {
 }
 
 .band-cards {
+  width: 100%;
   display: grid;
   grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
   padding: 0 50px;
   gap: 10px;
-  align-self: stretch;
 }
 
 .band-card {
@@ -1129,9 +1133,10 @@ textarea {
   display: flex;
   justify-content: center;
   align-items: flex-end;
-  /* min-width: 256px; */
-  /* min-height: 700px; */
-  flex-wrap: wrap;
+}
+
+.band-card img {
+  width: 100%;
 }
 
 .band-card-bg {
@@ -1169,7 +1174,7 @@ textarea {
 .music {
   padding: 60px 140px 0 140px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
 }
 
@@ -1187,6 +1192,7 @@ textarea {
 }
 
 .player {
+  width: 60%;
   display: flex;
   flex-direction: column;
 }
@@ -1205,8 +1211,6 @@ textarea {
   display: flex;
   align-items: center;
   gap: 22px;
-  min-width: 600px;
-  max-height: 105px;
   background: linear-gradient(
     270deg,
     var(--black-100, #141414) 5%,
@@ -1221,4 +1225,114 @@ textarea {
 
 .play-mode {
   margin-left: auto;
+}
+
+@media (min-width: 375px) and (max-width: 768px) {
+  .boombox {
+    padding: 20px 36px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .artist {
+    align-self: flex-start;
+  }
+
+  .tour {
+    padding: 60px 36px;
+  }
+
+  .concert-list {
+    width: 100%;
+  }
+
+  .about-main {
+    margin: 36px;
+    gap: 60px;
+  }
+
+  .about-origins,
+  .about-influence,
+  .about-succes {
+    width: 100%;
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .band-cards {
+    grid-template-columns: 1fr;
+    padding: 0;
+    gap: 0;
+  }
+
+  .music {
+    padding: 40px 36px 40px 36px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .albums {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .album-best img {
+    max-width: 150px;
+  }
+
+  .player {
+    width: 100%;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1280px) {
+  .boombox {
+    padding: 60px 70px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .artist {
+    align-self: flex-start;
+  }
+
+  .tour {
+    padding: 60px 70px;
+  }
+
+  .concert-list {
+    width: 100%;
+  }
+
+  /* .about-main {
+    margin: 70px;
+    gap: 60px;
+  } */
+
+  .band-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    padding: 0;
+    gap: 0;
+  }
+
+  .music {
+    padding: 40px 70px 40px 70px;
+    flex-direction: column;
+    gap: 40px;
+  }
+
+  .albums {
+    display: flex;
+    flex-direction: row;
+    gap: 40px;
+  }
+
+  .album-best img {
+    max-width: 250px;
+  }
+
+  .player {
+    width: 100%;
+  }
 }

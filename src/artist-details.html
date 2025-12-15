@@ -36,58 +36,34 @@
           <h1 class="main-title">Tour</h1>
         </div>
         <div class="concert-list">
-          <div class="concert">
-            <div class="concert-date">
-              <p class="tour-dates-text">26</p>
-              <p class="main-text">Dec</p>
-            </div>
-            <div class="concert-place">
-              <p class="main-text">Basalt, Colorado, USA</p>
-              <p class="additional-text">Boombassador at tacaw</p>
-            </div>
-            <a class="ticket-button" href=""
-              >Buy tickets <img src="/src/img/ticket-button-mask.svg" alt=""
-            /></a>
-          </div>
-          <div class="concert">
-            <div class="concert-date">
-              <p class="tour-dates-text">27</p>
-              <p class="main-text">Dec</p>
-            </div>
-            <div class="concert-place">
-              <p class="main-text">Denver, Colorado, USA</p>
-              <p class="additional-text">Mission Ballroom</p>
-            </div>
-            <a class="ticket-button" href=""
-              >Buy tickets <img src="/src/img/ticket-button-mask.svg" alt=""
-            /></a>
-          </div>
-          <div class="concert">
-            <div class="concert-date">
-              <p class="tour-dates-text">29</p>
-              <p class="main-text">Dec</p>
-            </div>
-            <div class="concert-place">
-              <p class="main-text">Frisco, Colorado, USA</p>
-              <p class="additional-text">10 Mile Music Hall</p>
-            </div>
-            <a class="ticket-button" href=""
-              >Buy tickets <img src="/src/img/ticket-button-mask.svg" alt=""
-            /></a>
-          </div>
-          <div class="concert">
-            <div class="concert-date">
-              <p class="tour-dates-text">31</p>
-              <p class="main-text">Dec</p>
-            </div>
-            <div class="concert-place">
-              <p class="main-text">Boulder, Colorado, USA</p>
-              <p class="additional-text">Boulder Theater</p>
-            </div>
-            <a class="ticket-button" href=""
-              >Buy tickets <img src="/src/img/ticket-button-mask.svg" alt=""
-            /></a>
-          </div>
+          <include
+            src="./components/tour-concert-card.html"
+            locals='{
+  "day": "26", "month": "dec", "title": "Basalt, Colorado, USA",
+  "subtitle": "Boombassador at tacaw"
+}'
+          ></include>
+          <include
+            src="./components/tour-concert-card.html"
+            locals='{
+  "day": "27", "month": "dec", "title": "Denver, Colorado, USA",
+  "subtitle": "Mission Ballroom"
+}'
+          ></include>
+          <include
+            src="./components/tour-concert-card.html"
+            locals='{
+  "day": "29", "month": "dec", "title": "Frisco, Colorado, USA",
+  "subtitle": "10 Mile Music Hall"
+}'
+          ></include>
+          <include
+            src="./components/tour-concert-card.html"
+            locals='{
+  "day": "31", "month": "dec", "title": "Boulder, Colorado, USA",
+  "subtitle": "Boulder Theater"
+}'
+          ></include>
         </div>
         <a href="" class="button-secondary-outline"
           >All tickets <img src="/src/img/icons/arrow-right.svg" alt=""
